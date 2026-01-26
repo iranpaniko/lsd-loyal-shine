@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LSD | Loyal Shine Detailing</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- BOTÓN WHATSAPP FLOTANTE -->
+<a href="https://wa.me/529848066658"
+   class="whatsapp-float"
+   target="_blank"
+   aria-label="WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<header class="hero">
+  <img src="img/logo.png" alt="Loyal Shine Detailing" class="logo">
+  <h1>Loyal Shine Detailing</h1>
+  <p class="tagline">Brillo que impone respeto</p>
+  <a href="#citas" class="btn-gold">Agenda tu lavado</a>
+</header>
+
+<section class="about">
+  <p>
+    Tu nave habla por ti.  
+    En <strong>LSD</strong> no lavamos por lavar:  
+    detallamos, respetamos y dejamos presencia.
+  </p>
+</section>
+
+<section class="services">
+  <h2>Servicios</h2>
+
+  <div class="cards">
+
+    <div class="card">
+      <h3>Lavado Pa-Pronto</h3>
+      <ul>
+        <li>Exterior completo</li>
+        <li>Secado sin marcas</li>
+        <li>Interior rápido</li>
+      </ul>
+      <span>Pa’ traerla limpia sin fallar</span>
+    </div>
+
+    <div class="card premium">
+      <h3>Lavado Premium</h3>
+      <ul>
+        <li>Lavado detallado</li>
+        <li>Cera y brillo profundo</li>
+        <li>Interior al cien</li>
+      </ul>
+      <span>Pa’ que tu nave imponga respeto</span>
+    </div>
+
+    <div class="card">
+      <h3>FLOTILLAS</h3>
+      <ul>
+        <li>Servicio programado</li>
+        <li>Precios especiales</li>
+        <li>Puntualidad garantizada</li>
+      </ul>
+      <span>El jale también debe verse bien</span>
+    </div>
+
+  </div>
+</section>
+
+<section id="citas" class="booking">
+  <h2>Agenda tu cita</h2>
+  <p>Rápido, directo y sin vueltas.</p>
+
+  <form onsubmit="sendWhatsApp(); return false;">
+    <input id="nombre" placeholder="Nombre" required>
+    <input id="vehiculo" placeholder="Tipo de vehículo" required>
+
+    <select id="servicio">
+      <option>Lavado Básico</option>
+      <option>Lavado Premium</option>
+      <option>Flotilla</option>
+    </select>
+
+    <input type="date" id="fecha" required>
+    <input type="time" id="hora" required>
+
+    <button type="submit" class="btn-gold">Enviar por WhatsApp</button>
+  </form>
+</section>
+
+<footer>
+  <p>LSD – Loyal Shine Detailing ©</p>
+  <p>Agenda directa: 984 806 6658</p>
+</footer>
+
+<script>
+function sendWhatsApp() {
+  const msg =
+`🔥 CITA LSD – Loyal Shine Detailing 🔥
+Nombre: ${nombre.value}
+Vehículo: ${vehiculo.value}
+Servicio: ${servicio.value}
+Fecha: ${fecha.value}
+Hora: ${hora.value}`;
+
+  window.open(`https://wa.me/529848066658?text=${encodeURIComponent(msg)}`);
+}
+</script>
+</body>
+</html>
